@@ -60,13 +60,13 @@ class RosettaCodeSample
 					setLineNumbersAreaBackColor(new qColor() { setrgb(0,0,0,255) })
 					new RingCodeHighLighter( SourceCodeTextEdit.document() ) {
 						setColors(
-									 new qcolor() { setrgb(30,220,175,255) },
-									 new qcolor() { setrgb(166,226,46,255) },
-									 new qcolor() { setrgb(117,160,172,157)},
-									 new qcolor() { setrgb(230,191,77,255) },
-									 new qcolor() { setrgb(240,127,224,255)}
-									)
-					}
+							 new qcolor() { setrgb(30,220,175,255) },
+							 new qcolor() { setrgb(166,226,46,255) },
+							 new qcolor() { setrgb(117,160,172,157)},
+							 new qcolor() { setrgb(230,191,77,255) },
+							 new qcolor() { setrgb(240,127,224,255)}
+							)
+			}
 				}
 				this.TaskDescreptionHyperLink = new qlabel(this.win) {
 					move(196,49)
@@ -236,149 +236,149 @@ class RosettaCodeSample
 
 
 				
-							
-							//	this.SourceCodeTextEdit.setReadOnly(1)	
-								this.sampleListWidget.SetSelectionMode(1)
-								this.TaskDescreptionHyperLink.SetOpenExternalLinks(1)
-								this.TaskCorrectionHyperLink.SetOpenExternalLinks(1)
-								
-							
-								for x=1 to len(aSample)
-									aListSample + aSample[x]["Titele"] 
-								next
-						
-								for x=1 to len(aListSample)
-									this.sampleListWidget.AddItem(aListsample[x] )
-									
-								next
-					
-									this.SampleListWidget.SetCurrentRow( 0 , 2)
-	
+
+		//this.SourceCodeTextEdit.setReadOnly(1)	
+		this.sampleListWidget.SetSelectionMode(1)
+		this.TaskDescreptionHyperLink.SetOpenExternalLinks(1)
+		this.TaskCorrectionHyperLink.SetOpenExternalLinks(1)
+
+
+		for x=1 to len(aSample)
+			aListSample + aSample[x]["Titele"] 
+		next
+
+		for x=1 to len(aListSample)
+			this.sampleListWidget.AddItem(aListsample[x] )
+
+		next
+
+		this.SampleListWidget.SetCurrentRow( 0 , 2)
+
 
 	func SelectSample()
 			
-	 			this.OutputTextEdit.setplaintext("")
-	 			crNo = SampleListWidget.CurrentRow() +1
-				?  crNo
-				 cActiveFileName 	= CurrentDir() +"\"+ aSample[crNo]["RosettaSampleSourcsCode"]
-				//? cActiveFileName 	
-				TaskUrlCorrection = "Correction From Rosetta"          
-				preparCorrectionUrl =  aSample[crNo]["SampleUrlText"]  
-				Correctionstrurl = '<a href= #{f1}>#{f2}</a>'
-				Correctionstrurl =substr(Correctionstrurl , "#{f1}" ,preparCorrectionUrl)
-				Correctionstrurl =substr(Correctionstrurl , "#{f2}" ,TaskUrlCorrection )
-				this.TaskCorrectionHyperLink.setText(Correctionstrurl )
+		this.OutputTextEdit.setplaintext("")
+		crNo = SampleListWidget.CurrentRow() +1
+		?  crNo
+		 cActiveFileName 	= CurrentDir() +"\"+ aSample[crNo]["RosettaSampleSourcsCode"]
+		//? cActiveFileName 	
+		TaskUrlCorrection = "Correction From Rosetta"          
+		preparCorrectionUrl =  aSample[crNo]["SampleUrlText"]  
+		Correctionstrurl = '<a href= #{f1}>#{f2}</a>'
+		Correctionstrurl =substr(Correctionstrurl , "#{f1}" ,preparCorrectionUrl)
+		Correctionstrurl =substr(Correctionstrurl , "#{f2}" ,TaskUrlCorrection )
+		this.TaskCorrectionHyperLink.setText(Correctionstrurl )
 
-				TaskUrlDescreption = "Descreption :"+aSample[crNo]["Titele"] 
-				preparDescreptionUrl =  aSample[crNo]["UrlDescreption"]  
-				Descreptionstrurl = '<a href= #{f1}>#{f2}</a>'
-				Descreptionstrurl =substr(Descreptionstrurl , "#{f1}" ,preparDescreptionUrl)
-				Descreptionstrurl =substr(Descreptionstrurl , "#{f2}" ,TaskUrlDescreption )
-				this.TaskDescreptionHyperLink.setText(Descreptionstrurl )
-				
-				selectedListWidget = this.SampleListWidget.Item(crNo-1).Text()
-				this.Label1.SetText(selectedListWidget )
-				preparPeth = aSample[crNo]["RosettaSampleSourcsCode"]
-				//?	preparPeth	
-				SampleText = read(preparPeth)
-				//? SampleText
-				this.SourceCodeTextEdit.setPlaintext(SampleText )
+		TaskUrlDescreption = "Descreption :"+aSample[crNo]["Titele"] 
+		preparDescreptionUrl =  aSample[crNo]["UrlDescreption"]  
+		Descreptionstrurl = '<a href= #{f1}>#{f2}</a>'
+		Descreptionstrurl =substr(Descreptionstrurl , "#{f1}" ,preparDescreptionUrl)
+		Descreptionstrurl =substr(Descreptionstrurl , "#{f2}" ,TaskUrlDescreption )
+		this.TaskDescreptionHyperLink.setText(Descreptionstrurl )
+
+		selectedListWidget = this.SampleListWidget.Item(crNo-1).Text()
+		this.Label1.SetText(selectedListWidget )
+		preparPeth = aSample[crNo]["RosettaSampleSourcsCode"]
+		//?	preparPeth	
+		SampleText = read(preparPeth)
+		//? SampleText
+		this.SourceCodeTextEdit.setPlaintext(SampleText )
 					
 	func Run()
 				
-				if cActiveFileName = Null return  ok
-				save()
-				RunGUIOperation(cActiveFileName)
+		if cActiveFileName = Null return  ok
+		save()
+		RunGUIOperation(cActiveFileName)
 		
 	
 	func RunProcess( cProgram,cArg,cGetDataFunc)
 
-					aPara = split(cArg,",")
-					oStringList = new qStringlist() {
-						for cPara in aPara 
-							append(cPara)
-						next
-					}
-					oProcess = new qprocess(NULL) {
-						setprogram( cProgram)
-						setarguments(ostringlist)
-						setreadyreadstandardoutputevent(cGetDataFunc)
-						start_3(  QIODevice_ReadWrite )
-					}
-					return oProcess
+		aPara = split(cArg,",")
+		oStringList = new qStringlist() {
+			for cPara in aPara 
+				append(cPara)
+			next
+		}
+		oProcess = new qprocess(NULL) {
+			setprogram( cProgram)
+			setarguments(ostringlist)
+			setreadyreadstandardoutputevent(cGetDataFunc)
+			start_3(  QIODevice_ReadWrite )
+		}
+		return oProcess
 
 	func GetProcessData()
  
-						if ISNULL(oProcess) return ok
-						cText = oProcess.readallstandardoutput().data()
-						if isWindows() cText = substr(cText,WindowsNL(),nl) ok
-						cCurrentText = this.OutputTextEdit.toplaintext()
-						C_OUTPUTBUFFERSIZE = 1024*1024 # 1 MB
-						cText = right(cCurrentText,min(C_OUTPUTBUFFERSIZE-len(cText),len(cCurrentText)) ) + cText
-						this.OutputTextEdit.setplaintext(cText)
-						oCursor = this.OutputTextEdit.textcursor()
-						nPos = max(len(this.OutputTextEdit.toplaintext())-1,0)
-						oCursor.setPosition(nPos,QTextCursor_KeepAnchor)
-						oCursor.setPosition(nPos,QTextCursor_MoveAnchor)
-						this.OutputTextEdit.setTextCursor(oCursor)
+		if ISNULL(oProcess) return ok
+		cText = oProcess.readallstandardoutput().data()
+		if isWindows() cText = substr(cText,WindowsNL(),nl) ok
+		cCurrentText = this.OutputTextEdit.toplaintext()
+		C_OUTPUTBUFFERSIZE = 1024*1024 # 1 MB
+		cText = right(cCurrentText,min(C_OUTPUTBUFFERSIZE-len(cText),len(cCurrentText)) ) + cText
+		this.OutputTextEdit.setplaintext(cText)
+		oCursor = this.OutputTextEdit.textcursor()
+		nPos = max(len(this.OutputTextEdit.toplaintext())-1,0)
+		oCursor.setPosition(nPos,QTextCursor_KeepAnchor)
+		oCursor.setPosition(nPos,QTextCursor_MoveAnchor)
+		this.OutputTextEdit.setTextCursor(oCursor)
 				
 	func SendData()
 
-						if ISNULL(oProcess) return ok
-						if isWindows()
-							cText = this.InputLineEdit.text() + windowsnl()
-						else 
-							cText = this.InputLineEdit.text() + nl
-						ok
-						oProcess.write(cText ,len(cText))
-						this.OutputTextEdit.insertplaintext(cText)
-						this.InputLineEdit.setText(" ")
+		if ISNULL(oProcess) return ok
+		if isWindows()
+			cText = this.InputLineEdit.text() + windowsnl()
+		else 
+			cText = this.InputLineEdit.text() + nl
+		ok
+		oProcess.write(cText ,len(cText))
+		this.OutputTextEdit.insertplaintext(cText)
+		this.InputLineEdit.setText(" ")
 
 	func RunGUIOperation( cActiveFileName)
 
-						this.OutputTextEdit.setplaintext(" ")
-						cDir = CurrentDir()
-						chdir(JustFilePath(cActiveFileName))
-						if isBatchFile(cActiveFileName)
-							cCode = RunBatchFile(cActiveFileName)
-							oProcess = RunProcess(cCode," ","oRosettaSample.GetProcessData()")
-						else 
-							oProcess = RunProcess(exefilename(),cActiveFileName,"oRosettaSample.GetProcessData()")
-						ok
-						chdir(cDir)
+		this.OutputTextEdit.setplaintext(" ")
+		cDir = CurrentDir()
+		chdir(JustFilePath(cActiveFileName))
+		if isBatchFile(cActiveFileName)
+			cCode = RunBatchFile(cActiveFileName)
+			oProcess = RunProcess(cCode," ","oRosettaSample.GetProcessData()")
+		else 
+			oProcess = RunProcess(exefilename(),cActiveFileName,"oRosettaSample.GetProcessData()")
+		ok
+		chdir(cDir)
 				
 	
 	func isBatchFile( cFile)
  
-						if right(lower(trim(cFile)),4) = ".bat" or 
-							right(lower(trim(cFile)),3) = ".sh"
-							return True 
-						ok
-						return False 
+		if right(lower(trim(cFile)),4) = ".bat" or 
+			right(lower(trim(cFile)),3) = ".sh"
+			return True 
+		ok
+		return False 
 
 	func RunBatchFile( cFile)
 
-						if iswindows()
-							chdir(JustFilePath(cFile))
-							cCode = cFile
-						else
-							cCode = 'cd $(dirname "'+cFile+'") ; ' + './' + cFile +  nl
-						ok
-						return cCode 
+		if iswindows()
+			chdir(JustFilePath(cFile))
+			cCode = cFile
+		else
+			cCode = 'cd $(dirname "'+cFile+'") ; ' + './' + cFile +  nl
+		ok
+		return cCode 
 	
 	func Save()
 			
-					if cActiveFileName = NULL return  ok
-					write(cActiveFileName,this.SourceCodeTextEdit.toplaintext())
-					
+		if cActiveFileName = NULL return  ok
+		write(cActiveFileName,this.SourceCodeTextEdit.toplaintext())
+
 	func Search()
 
-					cStrSearch =  this.SearchLineEdit.Text()
-					for index = 1 to len(aListSample)
-							if 	substr(aListSample[index], cStrSearch ) 
-								this.SampleListWidget.SetCurrentRow( index , 2)
-							ok
-					 next
+		cStrSearch =  this.SearchLineEdit.Text()
+		for index = 1 to len(aListSample)
+				if 	substr(aListSample[index], cStrSearch ) 
+					this.SampleListWidget.SetCurrentRow( index , 2)
+				ok
+		 next
 			
 					
 			
