@@ -34,7 +34,7 @@ class RosettaCodeSample
 			resize(800,600)
 			setWindowTitle("rosettacodesamples")
 			setstylesheet("background-color:;") 
-			
+			setWinIcon(this.win,CurrentDir() + "/RosettaSampleSourcsCode/rosetta.ico")
 	  	 this.oSourceCodeWidget = new qWidget(){ 
 				this.SourceCodeTextEdit = new CodeEditor(this.win) {
 					move(182,95)
