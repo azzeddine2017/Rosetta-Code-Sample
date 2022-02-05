@@ -1,5 +1,5 @@
 # Rosetta-Ring-Sample
-this is an application written by Azzeddine Remmal Sponsored by Mr. Mahmoud Samir Fayed Code samples written in the Ring language are collected from Rosettta Code author : Cal Mosoft - 802 samples - 
+this is an application written by Azzeddine Remmal Sponsored by Mr. Mahmoud Samir Fayed Code samples written in the Ring language are collected from Rosettta Code author : Gal Zsolt (CalmoSoft) - 802 samples - 
 
 You can run and edit samples Once run, the last modification to the sample will be saved
 If you want more information about the Task, you can click on the description link
