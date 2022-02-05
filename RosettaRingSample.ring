@@ -2,19 +2,9 @@
 # Author  : Azzeddine Remmal
 # Email   : <azzeddine.remmal@gmail.com>
 # Date : 02/02/2022
-Load "stdlibcore.ring"
-Load "guilib.ring"
 
 
 
-if IsMainSourceFile() { 
-	new QApp {
-		StyleFusion()
-		oRosettaSample = new RosettaCodeSample
-		oRosettaSample{win.show() }
-		exec()
-	}
-}
 
 class RosettaCodeSample
 
