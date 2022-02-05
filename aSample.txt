@@ -18,11 +18,11 @@
 		],
 		[
 			"SampleUrlText",
-			"https://github.com/azzeddine2017/Rosetta-Code-Sample"
+			""
 		],
 		[
 			"UrlDescreption",
-			" "
+			"https://github.com/azzeddine2017/Rosetta-Code-Sample"
 		]
 	],
 	[
