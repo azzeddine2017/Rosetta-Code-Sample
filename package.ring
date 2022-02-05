@@ -1,7 +1,7 @@
 aPackageInfo = [
-	:name = "The rosettacodesample Package",
-	:description = "Our rosettacodesample package using the Ring programming language",
-	:folder = "rosettacodesample",
+	:name = "The Rosetta-Ring-Sample Package",
+	:description = "Our Rosetta-Ring-Sample package using the Ring programming language",
+	:folder = "Rosetta-Ring-Sample",
 	:developer = "Azzeddine Remmal",
 	:email = "azzeddine.remmal@gmail.com",
 	:license = "MIT License",
@@ -15,7 +15,12 @@ aPackageInfo = [
 	],
 	:libs = 	[
 		[
-			:name = "",
+			:name = "stdlib.ring",
+			:version = "",
+			:providerusername = ""
+		],
+		[
+			:name = "guilib.ring",
 			:version = "",
 			:providerusername = ""
 		]
