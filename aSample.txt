@@ -366,15 +366,15 @@
 	[
 		[
 			"Titele",
-			"Abundant, deficient and perfect number classifications"
+			"Abundant deficient and perfect number classifications"
 		],
 		[
 			"cFileRing",
-			"Abundant,deficientandperfectnumberclassifications.ring"
+			"Abundantdeficientandperfectnumberclassifications.ring"
 		],
 		[
 			"RosettaSampleSourcsCode",
-			"RosettaSampleSourcsCode/Abundant,deficientandperfectnumberclassifications.ring"
+			"RosettaSampleSourcsCode/Abundantdeficientandperfectnumberclassifications.ring"
 		],
 		[
 			"HrefStr",
