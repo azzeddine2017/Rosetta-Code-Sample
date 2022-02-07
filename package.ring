@@ -5,7 +5,7 @@ aPackageInfo = [
 	:developer = "Azzeddine Remmal",
 	:email = "azzeddine.remmal@gmail.com",
 	:license = "MIT License",
-	:version = "1.0.0",
+	:version = "1.0.1",
 	:ringversion = "1.16",
 	:versions = 	[
 		[
@@ -15,14 +15,14 @@ aPackageInfo = [
 	],
 	:libs = 	[
 		[
-			:name = "stdlib.ring",
-			:version = "",
-			:providerusername = ""
+			:name = "ringqt",
+			:version = "1.0.8",
+			:providerusername = "ringpackages"
 		],
 		[
-			:name = "guilib.ring",
-			:version = "",
-			:providerusername = ""
+			:name = "stdlib",
+			:version = "1.0.0",
+			:providerusername = "ringpackages"
 		]
 	],
 	:files = 	[
