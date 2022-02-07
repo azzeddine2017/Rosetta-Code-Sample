@@ -885,5 +885,9 @@ aPackageInfo = [
 	:linuxremove = "",
 	:macosremove = "",
 	:ubunturemove = "",
-	:fedoraremove = ""
+	:fedoraremove = "",
+	:remotefolder = "Rosetta-Ring-Sample",
+	:branch = "master",
+	:providerusername = "azzeddine2017",
+	:providerwebsite = "github.com"
 ]
