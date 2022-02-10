@@ -7,22 +7,22 @@
 
 
 class RosettaCodeSample
-
-		win   sampleListWidget 	SearchLineEdit 	Label1	 oProcess
-		TaskDescreptionHyperLink 	SourceCodeTextEdit	Runbtn  Searchbtn
-		Sendbtn		OutputTextEdit	InputLineEdit		TaskCorrectionHyperLink
-		oDockSourceCode				oDockOutput					oDockListWidget
-		oSourceCodeWidget			OutputWidget					oListWidget	
+		oProcess			win
+		sampleListWidget 		SearchLineEdit 			Label1	     
+		TaskDescreptionHyperLink 	SourceCodeTextEdit		Runbtn  
+		OutputTextEdit			InputLineEdit			Searchbtn
+		oDockSourceCode			oDockOutput			Sendbtn		
+		oSourceCodeWidget		OutputWidget			oListWidget	
 		oLayoutSourceCodeText		oLayoutOutputTextEdit		oLayoutListWidget
-		oDesktop
+		oDesktop			TaskCorrectionHyperLink		oDockListWidget
 
-		cssText    = "border:1px solid black;border-radius:7px;color:blue;border:2px solid #9977fa;"
-		cssLabel   = "color:navy;"
-		cssButton = "QPushButton{background-color:green;border:2px solid #9977fa;border-radius:15px;color:lightblue;} QPushButton:hover{color:navy;background-color:#2ca57b;} QPushButton:pressed{color:#aaa;background-color:#2ca57b; }"
-		cssSourceCode = "QPlainTextEdit {background-color:#0a0101;border:2px solid #9977fa;border-radius:15px;color:#92d50d;}"
-		cssSampleListWidget = "QListWidget{background-color:#aecdcc;border:2px solid #9977fa;border-radius:15px;color:#0f0c62;}"
-		cssOutputTextEdit = "QTextEdit{background-color:#10122e;border:2px solid #9977fa;border-radius:15px;color:#ebedf0;}"
-		cActiveFileName 	= ""
+		cssText    		=	 "border:1px solid black;border-radius:7px;color:blue;border:2px solid #9977fa;"
+		cssLabel   		=	 "color:navy;"
+		cssButton 		=	 "QPushButton{background-color:green;border:2px solid #9977fa;border-radius:15px;color:lightblue;} QPushButton:hover{color:navy;background-color:#2ca57b;} QPushButton:pressed{color:#aaa;background-color:#2ca57b; }"
+		cssSourceCode 		=	 "QPlainTextEdit {background-color:#0a0101;border:2px solid #9977fa;border-radius:15px;color:#92d50d;}"
+		cssSampleListWidget	= 	"QListWidget{background-color:#aecdcc;border:2px solid #9977fa;border-radius:15px;color:#0f0c62;}"
+		cssOutputTextEdit 	= 	"QTextEdit{background-color:#10122e;border:2px solid #9977fa;border-radius:15px;color:#ebedf0;}"
+		cActiveFileName     	= 	 ""
 	  
 		aListSample =[]
 		oTFont = new qfont("",0,0,0)
