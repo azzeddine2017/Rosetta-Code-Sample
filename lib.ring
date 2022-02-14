@@ -1,4 +1,4 @@
 # The Library File
-Load "stdlibcore.ring"
+Load "stdlib.ring"
 Load "guilib.ring"
 Load "RosettaRingSample.ring"
